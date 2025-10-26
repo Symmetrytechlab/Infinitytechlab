@@ -122,7 +122,7 @@ document.querySelectorAll('.stat-number').forEach(stat => {
 });
 
 // Observe sections for fade-in animation
-document.querySelectorAll('.service-card, .game-card, .team-card, .feature-item').forEach(element => {
+document.querySelectorAll('.service-card, .game-card, .feature-item').forEach(element => {
     observer.observe(element);
 });
 
@@ -292,7 +292,7 @@ serviceCards.forEach(card => {
 
 // ===== SCROLL REVEAL ANIMATION =====
 function revealOnScroll() {
-    const reveals = document.querySelectorAll('.service-card, .game-card, .team-card, .stat-item');
+    const reveals = document.querySelectorAll('.service-card, .game-card, .stat-item');
 
     reveals.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -306,7 +306,7 @@ function revealOnScroll() {
 }
 
 // Initialize elements for scroll reveal
-document.querySelectorAll('.service-card, .game-card, .team-card, .stat-item').forEach(element => {
+document.querySelectorAll('.service-card, .game-card, .stat-item').forEach(element => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(30px)';
     element.style.transition = 'all 0.6s ease';
@@ -324,14 +324,6 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// ===== TEAM MEMBER SOCIAL LINKS =====
-document.querySelectorAll('.team-card .social-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const platform = link.textContent;
-        showNotification(`Connect with us on ${platform}!`, 'info');
-    });
-});
 
 // ===== TYPED TEXT EFFECT (Optional Enhancement) =====
 function typeWriter(element, text, speed = 100) {
